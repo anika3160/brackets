@@ -1,5 +1,9 @@
 module.exports = function check(str, bracketsConfig) {
     // your solution
+    let conf=[];
+    let arrOfStr;
+    let controlArr;
+
     function getNewStr(oldStr) {
         let newStr=[];
         for (let i = 0; i <oldStr.length ; i++) {
@@ -15,14 +19,12 @@ module.exports = function check(str, bracketsConfig) {
         }
         return newStr;
     }
-    let conf=[];
+
     for (let i = 0; i <bracketsConfig.length ; i++) {
         for (let j = 0; j <bracketsConfig[i].length ; j++) {
             conf.push(bracketsConfig[i][j]);
         }
     }
-    let arrOfStr;
-    let controlArr;
     //console.log(str);
     arrOfStr=getNewStr(str);
    while (arrOfStr.length!==0){
